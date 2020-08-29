@@ -6,12 +6,14 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
 
     Book[] nameOfTheBookIssueByTheStudent;
 
     public Student() {
-        this.nameOfTheBookIssueByTheStudent = new Book[1];
+        this.nameOfTheBookIssueByTheStudent = new Book[5];
         for (int i = 0; i < nameOfTheBookIssueByTheStudent.length; i++) {
             nameOfTheBookIssueByTheStudent[i] = new Book("Book Number: " + (i + 1));
         }
@@ -29,4 +31,21 @@ public class Student {
         this.nameOfTheBookIssueByTheStudent = nameOfTheBookIssueByTheStudent;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Arrays.equals(nameOfTheBookIssueByTheStudent, student.nameOfTheBookIssueByTheStudent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(nameOfTheBookIssueByTheStudent);
+    }
+
+    @Override
+    public String toString() {
+        return  Arrays.toString(nameOfTheBookIssueByTheStudent);
+    }
 }
