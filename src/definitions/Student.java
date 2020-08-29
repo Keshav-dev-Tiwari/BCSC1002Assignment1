@@ -48,4 +48,22 @@ public class Student {
     public String toString() {
         return  Arrays.toString(nameOfTheBookIssueByTheStudent);
     }
+
+    public void nameOfTheStudent(String firstName, String middleName, String lastName) {
+        System.out.println("Name of the student " + firstName + " " + middleName + " " + lastName);
+    }
+
+    public void universityRollNumber(long number) {
+        System.out.println("University Roll NUmber: " + number);
+    }
+
+    public void numberOfBooksIssuedByStudent(int number) {
+        System.out.println("Number Of Books Issued By Student" + number);
+    }
+
+    public void booksAvailable() {
+        for (Book books : nameOfTheBookIssueByTheStudent) {
+            System.out.println(books);
+        }
+    }
 }
