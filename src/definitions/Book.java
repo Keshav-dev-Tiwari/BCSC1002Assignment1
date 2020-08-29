@@ -19,8 +19,8 @@ public class Book {
 
     public Book(String nameOfTheBook){
         this.nameOfTheBook = nameOfTheBook;
-        this.authorOfTheBook = "Abhishek";
-        this.ISBNnumberOfTheBook = "123456789";
+        this.authorOfTheBook = "Keshav";
+        this.ISBNnumberOfTheBook = "4567890123";
     }
 
     public Book(String nameOfTheBook, String authorOfTheBook, String ISBNnumberOfTheBook) {
@@ -28,5 +28,32 @@ public class Book {
         this.authorOfTheBook = authorOfTheBook;
         this.ISBNnumberOfTheBook = ISBNnumberOfTheBook;
 
+    }
+    public String getNameOfTheBook() {
+        return nameOfTheBook;
+    }
+
+    public void setNameOfTheBook(String nameOfTheBook) {
+
+        this.nameOfTheBook = nameOfTheBook;
+    }
+
+    public String getAuthorOfTheBook() {
+
+        return authorOfTheBook;
+    }
+
+    public void setAuthorOfTheBook(String authorOfTheBook) {
+        this.authorOfTheBook = authorOfTheBook;
+    }
+
+    public String getISBNnumberOfTheBook() {
+
+        return ISBNnumberOfTheBook;
+    }
+
+    public void setISBNnumberOfTheBook(String ISBNnumberOfTheBook) {
+
+        this.ISBNnumberOfTheBook = ISBNnumberOfTheBook;
     }
 }
