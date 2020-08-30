@@ -11,13 +11,6 @@ import java.util.Arrays;
 public class Library {
     Book[]  booksAvailableInLibrary;
 
-    public Library() {
-        this.booksAvailableInLibrary = new Book[10];
-        for (int i = 0; i < booksAvailableInLibrary.length; i++) {
-            booksAvailableInLibrary[i] = new Book("Book Number: " + (i + 1));
-        }
-    }
-
     public Library(Book[] booksAvailableInLibrary) {
         this.booksAvailableInLibrary = booksAvailableInLibrary;
     }
@@ -46,5 +39,18 @@ public class Library {
     @Override
     public String toString() {
         return Arrays.toString(booksAvailableInLibrary);
+    }
+
+    public Library() {
+        this.booksAvailableInLibrary = new Book[10];
+        for (int i = 0; i < booksAvailableInLibrary.length; i++) {
+            booksAvailableInLibrary[i] = new Book("Book Number: " + (i + 1));
+        }
+    }
+
+    public void libraryInventory() {
+        for (Book books : booksAvailableInLibrary) {
+            System.out.println(books);
+        }
     }
 }
